@@ -86,3 +86,4 @@ C:\workspace\ClimaTempoSimples\ClimaTempoSimples\ClimaTempoSimples\bin\pt-br\Sys
 C:\workspace\ClimaTempoSimples\ClimaTempoSimples\ClimaTempoSimples\obj\Debug\ClimaTempoSimples.csproj.CoreCompileInputs.cache
 C:\workspace\ClimaTempoSimples\ClimaTempoSimples\ClimaTempoSimples\obj\Debug\ClimaTempoSimples.dll
 C:\workspace\ClimaTempoSimples\ClimaTempoSimples\ClimaTempoSimples\obj\Debug\ClimaTempoSimples.pdb
+C:\workspace\ClimaTempoSimples\ClimaTempoSimples\ClimaTempoSimples\obj\Debug\ClimaTempoSimples.csproj.AssemblyReference.cache
