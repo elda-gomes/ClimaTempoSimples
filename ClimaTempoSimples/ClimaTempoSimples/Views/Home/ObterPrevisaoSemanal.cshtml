@@ -1,0 +1,60 @@
+﻿@using System.Globalization;
+
+@model List<ClimaTempoSimples.Models.PrevisaoClima>
+
+<h2>Clima para os próximos 7 dias na cidade de @ViewBag.NomeCidade</h2>
+
+<div class="container">
+    <div class="row seven-cols">
+        @foreach (var previsao in Model)
+        {
+            <div class="col-md-1">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            @previsao.DataPrevisao.ToString("dddd", new CultureInfo("pt-BR"))
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="col-md-12">
+                            <div class="row">
+                                @{
+                                    switch (previsao.Clima)
+                                    {
+                                        case "instavel":
+                                            <span class="glyphicon glyphicon-adjust" aria-hidden="true"></span>
+                                            <span>Instável</span>
+                                            break;
+                                        case "tempestuoso":
+                                            <span class="glyphicon glyphicon-flash" aria-hidden="true"></span>
+                                            <span>Tempestuoso</span>
+                                            break;
+                                        case "chuvoso":
+                                            <span class="glyphicon glyphicon-tint" aria-hidden="true"></span>
+                                            <span>Chuvoso</span>
+                                            break;
+                                        case "nublado":
+                                            <span class="glyphicon glyphicon-cloud" aria-hidden="true"></span>
+                                            <span>Nublado</span>
+                                            break;
+                                        case "ensolarado":
+                                            <span class="glyphicon glyphicon-certificate" aria-hidden="true"></span>
+                                            <span>Ensolarado</span>
+                                            break;
+                                    }
+                                }
+                            </div>
+                            <div class="row">
+                                Mínima: @((int?)previsao.TemperaturaMinima)°C
+                            </div>
+                            <div class="row">
+                                Máxima: @((int?)previsao.TemperaturaMaxima)°C
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
